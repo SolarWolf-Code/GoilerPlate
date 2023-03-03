@@ -11,7 +11,7 @@ import (
 
 func main() {
 
-	parser := argparse.NewParser("project", "Create a new go project")
+	parser := argparse.NewParser("goilerplate", "Create a new go project")
 	projectName := parser.String("n", "name", &argparse.Options{Required: true, Help: "Name of the project"})
 	projectPath := parser.String("p", "path", &argparse.Options{Required: true, Help: "Path to the project directory"})
 	overwriteIfExists := parser.Flag("o", "overwrite", &argparse.Options{Required: false, Help: "Overwrite the project if it already exists"})
@@ -35,9 +35,13 @@ func main() {
 
 	mkdirCmd := exec.Command("mkdir", completePath)
 	mkdirCmd.Run()
-
 	// create the project file by copying the template
-	cpCmd := exec.Command("cp", "template.go", completePath+"/"+"main.go")
+	fmt.Println("Coyping to: ", completePath+"/main.go")
+
+	// get exapnded ~/
+	home, _ := os.UserHomeDir()
+	templatePath := filepath.Join(home, "bin/GoilerPlate/template.go")
+	cpCmd := exec.Command("cp", templatePath, completePath+"/main.go")
 	cpCmd.Run()
 
 	// initialize the go mod

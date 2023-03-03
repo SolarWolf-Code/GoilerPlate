@@ -17,7 +17,7 @@ goilerplate -n myproject -p ~/Desktop
 ```
 The result of the command will be a new project with the following structure:
 ```
-~/home/wolf/Desktop/myproject
+~/Desktop/myproject
 ├── main.go
 ├── go.mod
 ```

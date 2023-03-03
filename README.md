@@ -2,7 +2,7 @@
 
 ## Installation
 ```bash
-git clone https://github.com/SolarWolf-Code/GoilerPlate && mkdir -p ~/bin && cp -r GoilerPlate ~/bin/ && chmod +x ~/bin/GoilerPlate/goilerplate && export PATH=$PATH:~/bin/GoilerPlate && echo "export PATH=$PATH:~/bin/GoilerPlate" >> ~/.bashrc && source ~/.bashrc && rm -rf GoilerPlate
+git clone https://github.com/SolarWolf-Code/GoilerPlate && mkdir -p ~/bin && cp -r GoilerPlate ~/bin/ && chmod +x ~/bin/GoilerPlate/gp && export PATH=$PATH:~/bin/GoilerPlate && echo "export PATH=$PATH:~/bin/GoilerPlate" >> ~/.bashrc && source ~/.bashrc && rm -rf GoilerPlate
 ```
 
 ## Usage

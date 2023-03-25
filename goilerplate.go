@@ -36,7 +36,7 @@ func main() {
 	mkdirCmd := exec.Command("mkdir", completePath)
 	mkdirCmd.Run()
 	// create the project file by copying the template
-	// get exapnded ~/
+	// get expanded ~/
 	home, _ := os.UserHomeDir()
 	templatePath := filepath.Join(home, "bin/GoilerPlate/template.go")
 	cpCmd := exec.Command("cp", templatePath, completePath+"/main.go")
